@@ -1,12 +1,15 @@
 package learn.field_agent.data;
 
+import learn.field_agent.models.Agency;
 import learn.field_agent.models.SecurityClearance;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
 class SecurityClearanceJdbcTemplateRepositoryTest {
@@ -23,6 +26,13 @@ class SecurityClearanceJdbcTemplateRepositoryTest {
     }
 
     @Test
+    void shouldFindSecurityClearances() {
+        List<SecurityClearance> securityClearances = repository.findAll();
+        assertNotNull(securityClearances );
+        assertTrue(securityClearances.size() > 0);
+    }
+
+    @Test
     void shouldFindById() {
         SecurityClearance secret = new SecurityClearance(1, "Secret");
         SecurityClearance topSecret = new SecurityClearance(2, "Top Secret");
@@ -35,5 +45,30 @@ class SecurityClearanceJdbcTemplateRepositoryTest {
 
         actual = repository.findById(3);
         assertEquals(null, actual);
+    }
+
+    @Test
+    void shouldAddSecurityClearance() {
+        SecurityClearance securityClearance = new SecurityClearance();
+        securityClearance.setName("Test secret");
+        SecurityClearance actual = repository.add(securityClearance);
+        assertNotNull(actual);
+        assertEquals(3, actual.getSecurityClearanceId());
+    }
+
+    @Test
+    void shouldUpdateSecurityClearance() {
+
+        SecurityClearance securityClearance = new SecurityClearance();
+        securityClearance.setSecurityClearanceId(2);
+        securityClearance.setName("TEST");
+
+        assertTrue(repository.update(securityClearance));
+    }
+
+    @Test
+    void shouldDeleteSecurityClearance() {
+        assertTrue(repository.deleteById(2));
+        assertFalse(repository.deleteById(2));
     }
 }

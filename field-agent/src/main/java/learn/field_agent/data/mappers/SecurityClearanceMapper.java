@@ -12,7 +12,7 @@ public class SecurityClearanceMapper implements RowMapper<SecurityClearance> {
     public SecurityClearance mapRow(ResultSet resultSet, int i) throws SQLException {
         SecurityClearance securityClearance = new SecurityClearance();
         securityClearance.setSecurityClearanceId(resultSet.getInt("security_clearance_id"));
-        securityClearance.setName(resultSet.getString("security_clearance_name"));
+        securityClearance.setName(resultSet.getString("name"));
         return securityClearance;
     }
 }
