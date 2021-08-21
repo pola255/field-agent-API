@@ -71,4 +71,16 @@ class SecurityClearanceJdbcTemplateRepositoryTest {
         assertTrue(repository.deleteById(2));
         assertFalse(repository.deleteById(2));
     }
+
+    @Test
+    void shouldFindByName() {
+        SecurityClearance secret = new SecurityClearance(1, "Secret");
+
+        SecurityClearance actual = repository.findByName("Secret");
+        assertEquals(secret, actual);
+
+        actual = repository.findByName("Super Secret");
+        assertNull(actual);
+
+    }
 }

@@ -18,4 +18,6 @@ public interface SecurityClearanceRepository {
 
     boolean deleteById(int securityClearanceId);
 
+    SecurityClearance findByName(String name);
+
 }

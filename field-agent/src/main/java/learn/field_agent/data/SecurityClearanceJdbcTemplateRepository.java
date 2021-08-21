@@ -77,5 +77,16 @@ public class SecurityClearanceJdbcTemplateRepository implements SecurityClearanc
 
     }
 
+    @Override
+    public SecurityClearance findByName(String name) {
+
+        final String sql = "select security_clearance_id, name from security_clearance where name = ?;";
+
+        return jdbcTemplate.query(sql, new SecurityClearanceMapper(), name)
+                .stream()
+                .findFirst().orElse(null);
+    }
+
+
 
 }
