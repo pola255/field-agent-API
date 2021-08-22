@@ -17,3 +17,4 @@ public class ErrorResponse {
         return new ResponseEntity<>(result.getMessages(), status);
     }
 }
+

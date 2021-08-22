@@ -2,6 +2,8 @@ package learn.field_agent.domain;
 
 import learn.field_agent.data.AgentRepository;
 import learn.field_agent.models.Agent;
+import org.springframework.dao.DataAccessException;
+import org.springframework.dao.DataAccessResourceFailureException;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
