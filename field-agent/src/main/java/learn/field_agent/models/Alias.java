@@ -14,6 +14,7 @@ public class Alias {
         this.persona = persona;
         this.agentId = agentId;
     }
+
     public int getAliasId() {
         return aliasId;
     }

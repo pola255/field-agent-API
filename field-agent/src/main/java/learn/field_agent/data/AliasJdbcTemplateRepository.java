@@ -1,10 +1,7 @@
 package learn.field_agent.data;
 
 import learn.field_agent.data.mappers.AliasMapper;
-import learn.field_agent.data.mappers.SecurityClearanceMapper;
 import learn.field_agent.models.Alias;
-
-import learn.field_agent.models.SecurityClearance;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
@@ -74,8 +71,7 @@ public class AliasJdbcTemplateRepository implements AliasRepository {
             return jdbcTemplate.query(sql, new AliasMapper(), name, persona)
                     .stream()
                     .findFirst().orElse(null);
-        }
-        else{
+        } else {
             sql = "select alias_id, name, persona, agent_id from alias where name = ? and persona is null;";
             return jdbcTemplate.query(sql, new AliasMapper(), name)
                     .stream()

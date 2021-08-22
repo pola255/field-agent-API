@@ -1,7 +1,6 @@
 package learn.field_agent.data.mappers;
 
 import learn.field_agent.models.Alias;
-import learn.field_agent.models.Location;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;

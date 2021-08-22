@@ -3,5 +3,6 @@ package learn.field_agent.domain;
 public enum ResultType {
     SUCCESS,
     INVALID,
-    NOT_FOUND
+    NOT_FOUND,
+    SERVER_ERROR
 }

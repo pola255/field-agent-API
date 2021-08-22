@@ -1,7 +1,6 @@
 package learn.field_agent.data;
 
 import learn.field_agent.models.AgencyAgent;
-import learn.field_agent.models.Alias;
 
 public interface AgencyAgentRepository {
     boolean add(AgencyAgent agencyAgent);

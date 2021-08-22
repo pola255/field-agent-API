@@ -1,8 +1,8 @@
 package learn.field_agent.controllers;
 
 
-import learn.field_agent.domain.SecurityClearanceService;
 import learn.field_agent.domain.Result;
+import learn.field_agent.domain.SecurityClearanceService;
 import learn.field_agent.models.SecurityClearance;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +18,7 @@ public class SecurityClearanceController {
     private final SecurityClearanceService securityClearanceService;
 
     public SecurityClearanceController(SecurityClearanceService securityClearanceService) {
-        this.securityClearanceService= securityClearanceService;
+        this.securityClearanceService = securityClearanceService;
     }
 
     @GetMapping

@@ -56,7 +56,7 @@ public class SecurityClearanceControllerTest {
     }
 
     @Test
-    void addShouldReturn415WhenMultipart() throws Exception {
+    void addShouldReturn500WhenMultipart() throws Exception {
 
         ObjectMapper jsonMapper = new ObjectMapper();
 
@@ -68,7 +68,7 @@ public class SecurityClearanceControllerTest {
                 .content(securityClearanceJson);
 
         mvc.perform(request)
-                .andExpect(status().isUnsupportedMediaType());
+                .andExpect(status().isInternalServerError());
     }
 
     @Test

@@ -7,6 +7,14 @@ public class SecurityClearance {
     private int securityClearanceId;
     private String name;
 
+    public SecurityClearance() {
+    }
+
+    public SecurityClearance(int securityClearanceId, String name) {
+        this.securityClearanceId = securityClearanceId;
+        this.name = name;
+    }
+
     public int getSecurityClearanceId() {
         return securityClearanceId;
     }
@@ -20,14 +28,6 @@ public class SecurityClearance {
     }
 
     public void setName(String name) {
-        this.name = name;
-    }
-
-    public SecurityClearance() {
-    }
-
-    public SecurityClearance(int securityClearanceId, String name) {
-        this.securityClearanceId = securityClearanceId;
         this.name = name;
     }
 
