@@ -13,7 +13,6 @@ App located in main folder
 ## Create an agency
 ### POST  http://localhost:8080/api/agency  
 ``` Content-Type: application/json
-
 {
     "shortName": "CIA",
     "longName": "Central Intelligence Agency",
@@ -21,7 +20,6 @@ App located in main folder
     "agents": []
 }
 ```
-
 ## Delete an agency
 ### DELETE http://localhost:8080/api/agency/agencyId 
 
@@ -30,7 +28,6 @@ App located in main folder
 ### POST http://localhost:8080/api/agency/agent 
 
 ``` Content-Type: application/json
-
 {
     "agencyId": 1,
     "identifier": "007",
@@ -43,12 +40,10 @@ App located in main folder
     }
 }
 ```
-
 ## Update agency with agent
 
 ## PUT http://localhost:8080/api/agency/agent 
 ``` Content-Type: application/json
-
 {
     "agencyId": 1,
     "identifier": "agent x",
@@ -61,7 +56,6 @@ App located in main folder
     }
 }
 ```
-
 ## Delete an agency agent relationship
 ### DELETE http://localhost:8080/api/agency/agent/agencyId/agentId 
 
@@ -75,7 +69,6 @@ App located in main folder
 ### PUT http://localhost:8080/api/agent/agentId 
 
 ```Content-Type: application/json
-
 {
     "agentId": 2,
     "firstName": "Claudian",
@@ -86,7 +79,6 @@ App located in main folder
     "agencies": []
 }
 ```
-
 ## Delete an agent
 ### DELETE http://localhost:8080/api/agent/agentId 
 
@@ -94,14 +86,12 @@ App located in main folder
 ### POST http://localhost:8080/api/alias 
 
 ```Content-Type: application/json
-
 {
     "name": "Sherlock",
     "persona": "Holmes",
     "agentId": 1
 }
 ```
-
 ## Update alias
 ### POST http://localhost:8080/api/alias/aliasId  
 ```Content-Type: application/json
@@ -113,7 +103,6 @@ App located in main folder
     "aliasId": 1
 }
 ```
-
 ## Delete an alias
 ### DELETE http://localhost:8080/api/alias/aliasId  
 
@@ -123,7 +112,6 @@ App located in main folder
 ## Create location for agency
 ### POST http://localhost:8080/api/location 
 ```Content-Type: application/json
-
 {
     "name": "Safe House",
     "address": "212 The Parkway",
@@ -143,16 +131,13 @@ App located in main folder
 ## Create security clearance
 ### POST  http://localhost:8080/api/security-clearance/securityClearanceId 
 ```Content-Type: application/json
-
 {
    "name": "CIA"
 }
 ```
-
 ## Update secutity clearance
 ### PUT http://localhost:8080/api/security-clearance/securityClearanceId 
 ```Content-Type: application/json
-
 {
     "name": "Test",
     "securityClearanceId": 1
