@@ -1,16 +1,17 @@
 # field-agent-API 
-### Is a Rest services API using Java Spring Framework to manage an secret agency. Their User Interface using React and Bootstrap is available on : https://github.com/pola255/field-agent-ui
-## To start the proyect run: App located in main folder
-## Field agent endpoints
+Is a Rest services API using Java Spring Framework to manage an secret agency. Their User Interface using React and Bootstrap is available on : https://github.com/pola255/field-agent-ui
+## To start the proyect run: 
+App located in main folder
+# Field agent endpoints
 
 ## Get agency
-### GET http://localhost:8080/api/agency HTTP/1.1
+### GET http://localhost:8080/api/agency
 
 ## Get agency by Id
-### GET http://localhost:8080/api/agency/agencyId HTTP/1.1
+### GET http://localhost:8080/api/agency/agencyId
 
 ## Create an agency
-### POST  http://localhost:8080/api/agency  HTTP/1.1
+### POST  http://localhost:8080/api/agency  
 ``` Content-Type: application/json
 
 {
@@ -22,11 +23,11 @@
 ```
 
 ## Delete an agency
-### DELETE http://localhost:8080/api/agency/agencyId HTTP/1.1
+### DELETE http://localhost:8080/api/agency/agencyId 
 
 ## Create agency agent relationship
 
-### POST http://localhost:8080/api/agency/agent HTTP/1.1
+### POST http://localhost:8080/api/agency/agent 
 
 ``` Content-Type: application/json
 
@@ -45,7 +46,7 @@
 
 ## Update agency with agent
 
-## PUT http://localhost:8080/api/agency/agent HTTP/1.1
+## PUT http://localhost:8080/api/agency/agent 
 ``` Content-Type: application/json
 
 {
@@ -62,16 +63,16 @@
 ```
 
 ## Delete an agency agent relationship
-### DELETE http://localhost:8080/api/agency/agent/agencyId/agentId HTTP/1.1
+### DELETE http://localhost:8080/api/agency/agent/agencyId/agentId 
 
 ## Get agents
-### GET http://localhost:8080/api/agent HTTP/1.1
+### GET http://localhost:8080/api/agent 
 
 ## Get agent by Id
-### GET http://localhost:8080/api/agent/agentId HTTP/1.1
+### GET http://localhost:8080/api/agent/agentId 
 
 ## Update agent
-### PUT http://localhost:8080/api/agent/agentId HTTP/1.1
+### PUT http://localhost:8080/api/agent/agentId 
 
 ```Content-Type: application/json
 
@@ -87,10 +88,10 @@
 ```
 
 ## Delete an agent
-### DELETE http://localhost:8080/api/agent/agentId HTTP/1.1
+### DELETE http://localhost:8080/api/agent/agentId 
 
 ## Create an alias
-### POST http://localhost:8080/api/alias HTTP/1.1
+### POST http://localhost:8080/api/alias 
 
 ```Content-Type: application/json
 
@@ -102,7 +103,7 @@
 ```
 
 ## Update alias
-### POST http://localhost:8080/api/alias/aliasId  HTTP/1.1
+### POST http://localhost:8080/api/alias/aliasId  
 ```Content-Type: application/json
 
 {
@@ -114,13 +115,13 @@
 ```
 
 ## Delete an alias
-### DELETE http://localhost:8080/api/alias/aliasId  HTTP/1.1
+### DELETE http://localhost:8080/api/alias/aliasId  
 
 ## Get location of agency
-### GET http://localhost:8080/api/location/agencyId HTTP/1.1
+### GET http://localhost:8080/api/location/agencyId 
 
 ## Create location for agency
-### POST http://localhost:8080/api/location HTTP/1/1
+### POST http://localhost:8080/api/location 
 ```Content-Type: application/json
 
 {
@@ -137,10 +138,10 @@
 ### GET http://localhost:8080/api/security-clearance
 
 ## Get security clearance by Id
-### GET http://localhost:8080/api/security-clearance/securityClearanceId HTTP/1.1
+### GET http://localhost:8080/api/security-clearance/securityClearanceId 
 
 ## Create security clearance
-### POST  http://localhost:8080/api/security-clearance/securityClearanceId HTTP/1.1
+### POST  http://localhost:8080/api/security-clearance/securityClearanceId 
 ```Content-Type: application/json
 
 {
@@ -149,7 +150,7 @@
 ```
 
 ## Update secutity clearance
-### PUT http://localhost:8080/api/security-clearance/securityClearanceId HTTP/1.1
+### PUT http://localhost:8080/api/security-clearance/securityClearanceId 
 ```Content-Type: application/json
 
 {
@@ -158,4 +159,4 @@
 }
 ```
 ## Delete security clearance
-### DELETE http://localhost:8080/api/security-clearance/securityClearanceId HTTP/1.1
+### DELETE http://localhost:8080/api/security-clearance/securityClearanceId 
